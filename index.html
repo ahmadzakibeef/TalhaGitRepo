@@ -9,12 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5dc; /* Beige */
-            color: #222222; /* Black for body text */
-            text-align: center;
+            background-color: #f0f8ff; /* Light Blue */
+            color: #333333; /* Dark Gray for body text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background-color: #5a3d5c; /* Purple */
+            background-color: #1f3c88; /* Navy Blue */
             color: #ffffff; /* White text */
             padding: 50px 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -28,11 +30,13 @@
             font-size: 1.2rem;
         }
         .content {
+            flex: 1;
             padding: 20px;
         }
         footer {
-            background-color: #3c2a41; /* Dark Purple */
-            color: #ede0d4; /* Light Beige */
+            background-color: #2c3e50; /* Dark Blue */
+            color: #bdc3c7; /* Light Gray */
+            text-align: center;
             padding: 20px;
         }
     </style>
@@ -44,7 +48,7 @@
     </header>
     <div class="content">
         <p>Thank you for visiting! This is Ahmad Zaki's first successful deployment using Jenkins.</p>
-        <p>This deployment was powered by continuous integration and delivery principles, ensuring smooth and efficient updates.</p>
+        <p>This deployment is powered by automation and continuous delivery principles.</p>
     </div>
     <footer>
         <p>&copy; 2024 Ahmad Zaki | Powered by Jenkins</p>
