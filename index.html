@@ -3,188 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costumes for Kids - Ages 1 to 10</title>
+    <title>Ahmad Zaki's First Deployment</title>
     <style>
-        /* General Styles */
+        /* General styles */
         body {
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fdfd96; /* Bright yellow background */
-            color: #333333;
+            background-color: #f5f5f7; /* Light gray background */
+            color: #1d1d1f; /* Dark text color for contrast */
+            text-align: center;
         }
 
-        /* Navigation Styles */
-        nav {
-            background-color: #ff6f61;
-            position: fixed;
+        /* Star container */
+        .stars {
+            position: absolute;
             top: 0;
+            left: 0;
             width: 100%;
-            z-index: 10;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 300px; /* Constrain stars to header section */
+            pointer-events: none; /* Ensure stars do not interfere with clicks */
+            z-index: 1; /* Ensure stars are visible */
         }
 
-        nav ul {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            list-style: none;
-            justify-content: center;
+        .star {
+            position: absolute;
+            font-size: 16px; /* Size of the star */
+            color: gold; /* Golden color for stars */
+            opacity: 0.9; /* Slight transparency for elegance */
         }
 
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #ff9e8c;
-            border-radius: 5px;
-        }
-
-        /* Section Styles */
-        section {
+        /* Header styles */
+        header {
             padding: 100px 20px;
-            min-height: 100vh;
+            background-color: #ffffff; /* Clean white header */
+            border-bottom: 1px solid #e5e5ea; /* Subtle border for separation */
+            position: relative;
+            z-index: 2; /* Ensure text is on top */
+            overflow: hidden;
         }
 
-        .hero {
-            background-color: #ffeb3b; /* Vibrant yellow for hero section */
-            text-align: center;
-        }
-
-        .hero h1 {
+        header h1 {
             font-size: 3rem;
-            color: #ff6f61;
+            font-weight: 600;
+            margin: 0;
+            color: #1d1d1f;
         }
 
-        .hero p {
+        header p {
             font-size: 1.5rem;
-            color: #555555;
+            color: #6e6e73; /* Subtle gray for emphasis */
+            margin-top: 20px;
         }
 
-        .category {
-            margin: 20px 0;
-            text-align: center;
+        .rockets {
+            font-size: 1.8rem; /* Rocket icon size */
+            margin: 0 10px; /* Space between text and rockets */
+            color: #ff6f61; /* Rocket color */
         }
 
-        .category img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .category img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: #fff3e0;
-            text-align: center;
+        /* Content section styles */
+        .content {
             padding: 50px 20px;
         }
 
-        .contact h2 {
-            color: #ff6f61;
-        }
-
-        .about {
-            margin: 20px 0;
-        }
-
-        .about p {
+        .content p {
             font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 700px;
+            color: #6e6e73; /* Soft gray tone */
         }
 
+        .moment {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1d1d1f;
+            margin: 30px 0;
+        }
+
+        /* Footer styles */
         footer {
-            background-color: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 10px;
+            padding: 40px 20px;
+            background-color: #f5f5f7;
+            color: #6e6e73;
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e5ea;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#princess">Princess Costumes</a></li>
-            <li><a href="#superhero">Superhero Costumes</a></li>
-            <li><a href="#animal">Animal Costumes</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <h1>Costumes for Kids</h1>
-        <p>Explore the magic of costumes for kids aged 1 to 10!</p>
-    </section>
-
-    <!-- Princess Costumes -->
-    <section id="princess">
-        <h2>Princess Costumes</h2>
-        <div class="category">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Princess+1" alt="Princess 1" onclick="placeOrder('Princess 1')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Princess+2" alt="Princess 2" onclick="placeOrder('Princess 2')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Princess+3" alt="Princess 3" onclick="placeOrder('Princess 3')">
+    <!-- Star container in header -->
+    <header>
+        <div class="stars">
+            <!-- Stars will be generated using JavaScript -->
         </div>
-    </section>
-
-    <!-- Superhero Costumes -->
-    <section id="superhero">
-        <h2>Superhero Costumes</h2>
-        <div class="category">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Superhero+1" alt="Superhero 1" onclick="placeOrder('Superhero 1')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Superhero+2" alt="Superhero 2" onclick="placeOrder('Superhero 2')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Superhero+3" alt="Superhero 3" onclick="placeOrder('Superhero 3')">
-        </div>
-    </section>
-
-    <!-- Animal Costumes -->
-    <section id="animal">
-        <h2>Animal Costumes</h2>
-        <div class="category">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Animal+1" alt="Animal 1" onclick="placeOrder('Animal 1')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Animal+2" alt="Animal 2" onclick="placeOrder('Animal 2')">
-            <img src="https://via.placeholder.com/200/FF6F61/FFFFFF?text=Animal+3" alt="Animal 3" onclick="placeOrder('Animal 3')">
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div class="about">
-            <p>I’m the best at what I do. Each costume is crafted with care, creativity, and a touch of magic. Let your child’s imagination soar with my custom designs!</p>
-        </div>
-        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-    </section>
-
-    <!-- Footer -->
+        <h1>Welcome to the Future</h1>
+        <p>
+            <span class="rockets">🚀</span>
+            Ahmad Zaki's First Deployment with Jenkins
+            <span class="rockets">🚀</span>
+        </p>
+    </header>
+    <div class="content">
+        <p class="moment">"This is more than a deployment—it's a milestone."</p>
+        <p>Today, we celebrate the journey of innovation and progress. From writing the first line of code to seeing it live on the web, this deployment is powered by cutting-edge DevOps principles, automation, and passion for technology.</p>
+        <p>Thank you for being part of this incredible moment.</p>
+    </div>
     <footer>
-        <p>&copy; 2024 Costumes for Kids | Designed with love</p>
+        <p>&copy; 2024 Ahmad Zaki | Powered by Jenkins</p>
     </footer>
 
     <script>
-        // Function to handle placing an order
-        function placeOrder(itemName) {
-            const email = "yourname@example.com";
-            const subject = encodeURIComponent(`Order Inquiry: ${itemName}`);
-            const body = encodeURIComponent(`Hi,\n\nI would like to place an order for the following costume:\n\nItem: ${itemName}\n\nPlease get back to me with details.\n\nThank you!`);
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        // Generate stars dynamically for the header
+        const starContainer = document.querySelector('.stars');
+        const numStars = 50; // Adjust the number of stars
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.innerHTML = '★'; // Star icon
+
+            // Randomize star position within the header area
+            star.style.top = `${Math.random() * 80 + 10}%`; // Avoid very top and bottom of the header
+            star.style.left = `${Math.random() * 90 + 5}%`; // Avoid extreme left and right
+
+            // Randomize star size
+            const size = Math.random() * 12 + 8; // Size between 8px and 20px
+            star.style.fontSize = `${size}px`;
+
+            // Add star to the container
+            starContainer.appendChild(star);
         }
     </script>
 </body>
